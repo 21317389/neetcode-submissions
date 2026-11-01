@@ -1,11 +1,11 @@
 # 217. Contains Duplicate
 
-## C++ 語法紀錄
+## C++ Syntax
 * `unordered_set<int>`
 * `mp.insert(num)`
 * `mp.count(num)`
 
-## 程式碼
+## Code
 ```cpp
 class Solution {
 public:
@@ -22,6 +22,6 @@ public:
 };
 ```
 
-## 記憶體取捨
-* **Hash (`unordered_set`)：** Space Complexity 要用 $O(n)$，因為最壞情況（回傳 `false`）會把全部 element 都建立一次。
-* **Sort：** 節省記憶體可以使用 `sort` 達成 Space Complexity $O(1)$，但是 Time Complexity 會變成 $O(n \log n)$。
+## Memory & Time Trade-offs
+* **Hash (`unordered_set`):** In the worst case, the space complexity will be $O(n)$, because there are no duplicates and we store all elements in the set (memory).
+* **Sort (`std::sort`):** If we want to decrease memory usage, we can replace hash with sort (or use sort instead). Sort's space complexity is $O(1)$, but the time complexity is $O(n \log n)$.
